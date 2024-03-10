@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head> 
+	<meta charset="UTF-8"> 
+	<meta http-equiv="X-UA-Compatible"
+		content="IE=edge"> 
+	<meta name="viewport" content= 
+		"width=device-width, initial-scale=1.0"> 
+</head> 
+
+<body> 
+
+	<h1>Simple Student API</h1>
+	<h2>To list all students use this to copypaste = /students</h2>
+	<h2>To get one user use this to copypaste = /students/3</h2>
+	<!-- Action to the same route as in app.post() method -->
+	<h2>Add New Student</h2>
+	<form action="/submit" method="post"> 
+
+		Name: <input type="text" name="name"> 
+		<br><br> 
+
+		Midterm Grade: <input type="number" name="midterm_grade"> 
+		<br><br> 
+
+        Final Grade: <input type="number" name="final_grade"> 
+		<br><br> 
+		
+		<button type="submit">Submit</button> 
+	</form> 
+</body> 
+
+</html> 

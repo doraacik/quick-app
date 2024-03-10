@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  quick-app:
+    build: .
+    container_name: quick-app
+    volumes:
+      - ./:/quick-app
+    environment:
+      - name=value
+    ports:
+      - "4002:4002"
+    networks:
+      - my_network
+  postgres:
+    image: postgres:14-alpine
+    container_name: postgres_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - ~/apps/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=12345678
+      - POSTGRES_USER=user
+      - POSTGRES_DB=app
+    networks:
+      - my_network
+  
+volumes:
+  db_data:
+
+networks:
+  my_network:
+    driver: bridge
